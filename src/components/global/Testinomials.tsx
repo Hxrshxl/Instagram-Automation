@@ -9,7 +9,7 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "Social Media Manager",
     company: "Fashion Brand",
-    avatar: "/placeholder.svg?height=40&width=40&text=SJ",
+    avatar: "/user.jpg?height=40&width=40&text=SJ",
     content:
       "This platform has completely transformed how I manage our Instagram presence. The automation features save me hours every week, and our engagement has increased by 45% in just two months!",
     stars: 5,
@@ -18,7 +18,7 @@ const testimonials = [
     name: "Michael Chen",
     role: "Digital Marketer",
     company: "Tech Startup",
-    avatar: "/placeholder.svg?height=40&width=40&text=MC",
+    avatar: "/user.jpg?height=40&width=40&text=MC",
     content:
       "I've tried several Instagram automation tools, but this one stands out for its intuitive interface and powerful analytics. It's helped us grow our following by over 10,000 in three months.",
     stars: 5,
@@ -27,7 +27,7 @@ const testimonials = [
     name: "Jessica Williams",
     role: "Influencer",
     company: "Lifestyle Blog",
-    avatar: "/placeholder.svg?height=40&width=40&text=JW",
+    avatar: "/user.jpg?height=40&width=40&text=JW",
     content:
       "As an influencer, consistency is key. This platform helps me schedule content and engage with my audience even when I'm busy creating new content. It's been a game-changer for my brand.",
     stars: 4,

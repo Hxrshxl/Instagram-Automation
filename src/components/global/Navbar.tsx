@@ -58,10 +58,10 @@ const Navbar = () => {
             variant="outline"
             className="text-white border-white hover:bg-white/20 hover:text-purple-300 transition-all"
           >
-            <Link href="/dashboard">Log In</Link>
+            <Link href="/sign-in">Log In</Link>
           </Button>
           <Button className="bg-gradient-to-r from-purple-400 to-pink-400 hover:opacity-90 transition-opacity text-white">
-            <Link href="/dashboard">Get Started</Link>
+            <Link href="/sign-up">Get Started</Link>
           </Button>
         </div>
 
