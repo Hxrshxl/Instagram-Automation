@@ -58,7 +58,6 @@ posts Post []
 dms Dms []
 User User? @relation(fields: [userId], references: [id], onDelete: Cascade)
 userId String? @db.Uuid
-keywords Keyword[]
 }
 
 model Dms {
