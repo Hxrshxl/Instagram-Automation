@@ -3,6 +3,10 @@ import type { Metadata } from "next"
 import { DM_Sans } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/ui/theme-provider"
+import {
+  ClerkProvider
+} from '@clerk/nextjs'
+import { dark } from '@clerk/themes'
 
 
 const dmSans = DM_Sans({
@@ -10,22 +14,22 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "InstaGrow - Instagram Automation Platform",
+  title: "SlideIn - Instagram Automation Platform",
   description:
     "Automate your Instagram growth with our powerful platform. Schedule posts, engage with your audience, and grow your following.",
   keywords: "instagram automation, instagram growth, social media management, instagram scheduler",
-  authors: [{ name: "InstaGrow Team" }],
+  authors: [{ name: "SlideIn Team" }],
   openGraph: {
     title: "InstaGrow - Instagram Automation Platform",
     description: "Automate your Instagram growth with our powerful platform.",
     url: "https://instagrow.com",
-    siteName: "InstaGrow",
+    siteName: "SlideIn",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "InstaGrow - Instagram Automation Platform",
+        alt: "SlideIn - Instagram Automation Platform",
       },
     ],
     locale: "en_US",
@@ -39,6 +43,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
+    <ClerkProvider
+    appearance={{
+      baseTheme: dark,
+    }}
+    >
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="manifest" href="/manifest.json" />
@@ -52,5 +61,6 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
+    </ClerkProvider>
   )
 }
