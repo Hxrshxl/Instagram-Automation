@@ -1,8 +1,8 @@
 import React from 'react'
 
+type Props = {}
 
-
-const page = () => {
+const page = async (props: Props) => {
   return (
     <div>page</div>
   )
