@@ -1,10 +1,14 @@
 import React from 'react'
 
-type Props = {}
+type Props = {
+  params: { slug: string }
+}
 
-const Page = (props: Props) => {
+const Page = ({ params }: Props) => {
   return (
-    <div>Page</div>
+    <div>
+      <h2>Dashboard Page for: {params.slug}</h2>
+    </div>
   )
 }
 
