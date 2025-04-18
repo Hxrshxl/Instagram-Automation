@@ -14,6 +14,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://yourdomain.com'),
   title: "SlideIn - Instagram Automation Platform",
   description:
     "Automate your Instagram growth with our powerful platform. Schedule posts, engage with your audience, and grow your following.",
