@@ -3,6 +3,12 @@
 import { usePaths } from "@/hooks/user-nav"
 import Image from 'next/image';
 import Items from "./items";
+import { Separator } from "@/components/ui/separator";
+import ClerkAuthState from "../clerk-auth-state";
+import { DonutIcon, HelpCircle } from "lucide-react";
+import { SubscriptionPlan } from "../subscription";
+import UpgradeCard from "./upgrade";
+
 
 
 
@@ -30,6 +36,31 @@ const Sidebar = ({slug}: Props) => {
                slug={slug}
                />
                </div>
+               <div className="px-16">
+                <Separator
+                orientation="horizontal"
+                className="bg-[#bebaba] "
+                />
+               </div>
+               <div className="px-3 flex flex-col gap-y-5">
+                <div className="flex gap-x-2">
+                  <ClerkAuthState />
+                </div>
+                <p className="text-[#9B9CA0]">Profile</p>
+                <div className="flex gap-x-3">
+                </div>
+                <div className="flex gap-x-3">
+                  <HelpCircle/>
+                  <p className="text-[#989CA0]">Help</p>
+                </div>
+              </div>
+
+              <SubscriptionPlan>
+                <div className="flex-1 flex flex-col justify-end">
+                  <UpgradeCard />
+                </div>
+              </SubscriptionPlan>
+
         </div>
 
     </div>

@@ -1,5 +1,5 @@
+import { Home, Settings, Users, Settings as Rocket, RocketIcon, Activity } from 'lucide-react'; // Import Lucide icons
 import { v4 as uuid } from 'uuid';
-import { Home, Settings, Rocket } from 'lucide-react'; // Import Lucide icons
 
 type FieldProps = {
   label: string;
@@ -18,12 +18,22 @@ export const SIDEBAR_MENU: SideBarProps[] = [
   },
   {
     id: uuid(),
+    label: 'contacts',
+    icon: <Users />, // Using Lucide icon for contacts
+  },
+  {
+    id: uuid(),
     label: 'automations',
-    icon: <Settings />, // Using Lucide icon for settings (automations)
+    icon: <Activity />, // Using Lucide icon for automations
   },
   {
     id: uuid(),
     label: 'integrations',
-    icon: <Rocket /> // Using Lucide icon for rocket (integrations)
+    icon: <RocketIcon />, // Using Lucide icon for integrations
+  },
+  {
+    id: uuid(),
+    label: 'settings',
+    icon: <Settings />, // Using Lucide icon for settings
   },
 ];
