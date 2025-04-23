@@ -1,7 +1,7 @@
 import { Home, Settings, Users, Settings as Rocket, RocketIcon, Activity } from 'lucide-react'; // Import Lucide icons
 import { v4 as uuid } from 'uuid';
 
-type FieldProps = {
+export type FieldProps = {
   label: string;
   id: string;
 };

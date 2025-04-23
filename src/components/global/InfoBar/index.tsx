@@ -13,6 +13,7 @@ import Image from 'next/image'
 import CreateAutomation from '../Create-Automation'
 import SearchBar from './Search'
 import Notification from './Notifications'
+import MainbreadCrumb from '../main-bread-crumb'
 
 
 
@@ -75,7 +76,12 @@ const InfoBar = ({ slug }: Props) => {
             <SearchBar/>
             <CreateAutomation/>
             <Notification/>
+            
         </div>
+        <MainbreadCrumb 
+            page={page === slug? 'Home' :page}
+            slug={slug}
+            />
     </div>
 }
 
