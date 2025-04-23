@@ -1,7 +1,7 @@
 'use client'
 import { PAGE_BREAD_CRUMBS } from '@/constants/pages'
 import { usePaths } from '@/hooks/user-nav'
-import { HelpCircle, Menu } from 'lucide-react'
+import { HelpCircle, Menu, Search } from 'lucide-react'
 import React from 'react'
 import Sheet from '../sheet'
 import Items from '../sidebar/items'
@@ -10,13 +10,17 @@ import ClerkAuthState from '../clerk-auth-state'
 import { SubscriptionPlan } from '../subscription'
 import UpgradeCard from '../sidebar/upgrade'
 import Image from 'next/image'
+import CreateAutomation from '../Create-Automation'
+import SearchBar from './Search'
+import Notification from './Notifications'
+
 
 
 type Props = {
     slug: string
 }
 
-const Navbar = ({ slug }: Props) => {
+const InfoBar = ({ slug }: Props) => {
     const { page } = usePaths()
     const currentPage = PAGE_BREAD_CRUMBS.includes(page) || page === slug
     return currentPage && <div className='flex flex-col'>
@@ -67,8 +71,12 @@ const Navbar = ({ slug }: Props) => {
 
                 </Sheet>
             </span>
+
+            <SearchBar/>
+            <CreateAutomation/>
+            <Notification/>
         </div>
     </div>
 }
 
-export default Navbar
+export default InfoBar

@@ -28,8 +28,8 @@ import {
 } from "lucide-react"
 import { useClerk } from "@clerk/clerk-react"
 
-// Navbar Component
-const Navbar = () => {
+// InfoBar Component
+const InfoBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { signOut } = useClerk()
 
@@ -807,7 +807,7 @@ const Footer = () => {
 export default function Home() {
   return (
     <div className="min-h-screen bg-neutral-950 text-white">
-      <Navbar />
+      <InfoBar />
       <main>
         <Hero />
         <Features />

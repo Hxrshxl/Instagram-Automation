@@ -7,6 +7,7 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden'
 
 type Props = {
     trigger: React.ReactNode
@@ -15,10 +16,19 @@ type Props = {
     side: 'left' | 'right'
 }
 
-const Sheet = ({ children, trigger, className,side }: Props) => (
+const Sheet = ({ children, trigger, className, side }: Props) => (
   <ShadcnSheet>
     <SheetTrigger className={className}>{trigger}</SheetTrigger>
-    <SheetContent side={side} className='p-0'>{children}</SheetContent>
+    
+    {/* Wrap with SheetHeader and SheetTitle */}
+    <SheetContent side={side} className='p-0'>
+      <SheetHeader>
+        <VisuallyHidden>
+          <SheetTitle>Sheet Title</SheetTitle>
+        </VisuallyHidden>
+      </SheetHeader>
+      {children}
+    </SheetContent>
   </ShadcnSheet>
 )
 
