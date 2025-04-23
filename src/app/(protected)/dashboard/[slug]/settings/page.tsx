@@ -1,3 +1,4 @@
+import Billing from '@/components/global/Billing'
 import React from 'react'
 
 type Props = {}
